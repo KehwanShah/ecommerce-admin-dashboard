@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <h2>TechDash</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fa-solid fa-chart-pie"></i> Overview</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Orders</a></li>
+                    <li><a href="#"><i class="fa-solid fa-box-archive"></i> Products</a></li>
+                    <li><a href="#"><i class="fa-solid fa-database"></i> Database SQL</a></li>
+                    <li><a href="#"><i class="fa-solid fa-users"></i> Customers</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search orders, clients, or SQL logs...">
+                </div>
+                <div class="user-profile">
+                    <i class="fa-regular fa-bell icon"></i>
+                    <div class="avatar">AD</div>
+                    <span>Admin Developer</span>
+                </div>
+            </header>
+
+            <!-- Metrics Cards -->
+            <section class="cards-grid">
+                <div class="card">
+                    <div class="card-info">
+                        <h3>Total Revenue</h3>
+                        <p class="amount">$48,290.00</p>
+                        <span class="badge positive">+14.5% vs last month</span>
+                    </div>
+                    <div class="card-icon blue"><i class="fa-solid fa-dollar-sign"></i></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-info">
+                        <h3>Active Orders</h3>
+                        <p class="amount">1,248</p>
+                        <span class="badge positive">+8.2% new activity</span>
+                    </div>
+                    <div class="card-icon green"><i class="fa-solid fa-bag-shopping"></i></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-info">
+                        <h3>Total Clients</h3>
+                        <p class="amount">892</p>
+                        <span class="badge negative">-1.5% drop</span>
+                    </div>
+                    <div class="card-icon purple"><i class="fa-solid fa-user-check"></i></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-info">
+                        <h3>DB Health</h3>
+                        <p class="amount">99.9% Uptime</p>
+                        <span class="badge positive">Queries Optimized</span>
+                    </div>
+                    <div class="card-icon orange"><i class="fa-solid fa-server"></i></div>
+                </div>
+            </section>
+
+            <!-- Data Table Section -->
+            <section class="table-container">
+                <div class="table-header">
+                    <h2>Recent Database Transactions</h2>
+                    <button class="btn-primary" id="addRecordBtn">+ Add New Query Record</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Backend Logic</th>
+                            <th>Database Engine</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody">
+                        <tr>
+                            <td>#ORD-9021</td>
+                            <td>Alexander Wright</td>
+                            <td>Java Spring API</td>
+                            <td>MySQL 8.0</td>
+                            <td>$1,200.00</td>
+                            <td><span class="status-tag completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-9022</td>
+                            <td>Sophia Martinez</td>
+                            <td>C++ Processing Module</td>
+                            <td>PostgreSQL</td>
+                            <td>$450.50</td>
+                            <td><span class="status-tag pending">Processing</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-9023</td>
+                            <td>David Chen</td>
+                            <td>HTML5/REST Webhook</td>
+                            <td>SQLite 3</td>
+                            <td>$89.00</td>
+                            <td><span class="status-tag completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-9024</td>
+                            <td>Emma Watson</td>
+                            <td>Java Hibernate ORM</td>
+                            <td>Oracle DB</td>
+                            <td>$3,400.00</td>
+                            <td><span class="status-tag failed">Failed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- JS script attached at the end -->
+    <script src="script.js"></script>
+</body>
+</html>
